@@ -1,0 +1,18 @@
+{
+    "@context": "https://w3id.org/openbadges/v2",
+    "type": "Assertion",
+    "id": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/assertions/badgeAssertion.json",
+    "recipient": {
+        "type": "email",
+        "identity": "aaakanten@outlook.com",
+        "hashed": false
+    },
+    "image": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/badges/helloBaked.png",
+    "evidence": "https://example.org/beths-robot-work.html",
+    "issuedOn": "3/15/2018",
+    "expires": "never",
+    "badge": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/classes/helloBadge.json",
+    "verification": {
+        "type": "hosted"
+    }
+}
