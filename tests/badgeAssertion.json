@@ -1,7 +1,7 @@
 {
     "@context": "https://w3id.org/openbadges/v2",
     "type": "Assertion",
-    "id": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/assertions/badgeAssertion.json",
+    "id": "-mo",
     "recipient": {
         "type": "email",
         "identity": "aaakanten@outlook.com",
