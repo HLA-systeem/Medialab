@@ -1,0 +1,11 @@
+{
+	"@context": "https://w3id.org/openbadges/v2",
+	"type": "BadgeClass",
+	"id": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/classes/helloBadge.json",
+	"name": "Badge Issuing entrepreneur",
+	"description": "For bein able to award badges. This badge will get you laid.",
+	"image": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/images/monkeyDude.png",
+	"criteria": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/",
+	"tags": ["issuing", "tests"],
+	"issuer": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/issuers/dev.json"
+}
