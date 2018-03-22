@@ -6,7 +6,7 @@ module.exports.getBadgeclass = (req, res) => {
     var search = {};
     var start = 0;
     var limit = 0;
-    
+
     if(req.params.id != null){
         res = OPTIONS.detailOptions(req,res);
         BADGECLASS.model.find({_id:req.params.id}).lean().exec((err, data) => {
@@ -34,7 +34,6 @@ module.exports.getBadgeclass = (req, res) => {
                 resObject._links = {self: {'href': 'http://' + req.headers.host + '/badgeclasses'}};
 
                 BADGECLASS.model.count({}).exec((err2, total) =>{
-                    resObject.pagination = PAGINATION.paginate(start,limit,total,req);
                     STATUS.serie200(req, res, resObject); 
                 });
             }

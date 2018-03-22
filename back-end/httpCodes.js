@@ -5,7 +5,7 @@ module.exports.serie500 = (err, req, res, next) => {
 
 module.exports.serie400 = (err, req, res, data) => {
     if(req.get('Accept')){
-        if(req.get('Accept') != 'application/json'){ 
+        if(req.get('Accept') != 'application/json' && req.get('Accept') != 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'){ 
             res.status(406).send('Only JSON data will be send, but you only accept '+ req.get('Accept'));
             return true
         }
