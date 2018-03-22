@@ -1,5 +1,5 @@
 const MONGOOSE = require('mongoose');
-const CRUDS = require('../cruds/badgeclassCruds');
+const CRUDS = require('../cruds/badgeclassCRUD');
 
 MONGOOSE.Promise = global.Promise;
 

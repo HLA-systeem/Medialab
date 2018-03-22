@@ -1,5 +1,5 @@
 const MONGOOSE = require('mongoose');
-const CRUDS = require('../cruds/issuerCruds');
+const CRUDS = require('../cruds/issuerCRUD');
 
 MONGOOSE.Promise = global.Promise;
 
@@ -36,7 +36,7 @@ var IssuerSchema = MONGOOSE.Schema(
     {versionKey: false},
 );
 
-module.exports.model = MONGOOSE.model('Badgeclass', IssuerSchema);
+module.exports.model = MONGOOSE.model('Issuer', IssuerSchema);
 module.exports.get = CRUDS.getIssuer;
 module.exports.post = CRUDS.postIssuer;
 module.exports.update = CRUDS.updateIssuer;

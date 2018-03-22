@@ -2,7 +2,7 @@ const ASSERTION = require('../models/assertionModel');
 const STATUS = require('../httpCodes');
 const OPTIONS = require('../options');
 
-module.exports.getAssertion = (req, res) => {}
+module.exports.getAssertion = (req, res) => {
     var search = {};
     var start = 0;
     var limit = 0;
@@ -44,12 +44,19 @@ module.exports.getAssertion = (req, res) => {}
 
 module.exports.postAssertion = (req, res) =>{
     let data = new ASSERTION.model({
-        id: req.body.name,
-        recipient: req.body.species,
-        image: req.body.capable_of,
-        evidence: req.body.residence,
-        eye_color: req.body.eye_color,
-        hair_color: req.body.hair_color,
+        id: req.body.id,
+        recipient: {
+            type:req.body.recipient.type,
+            identity:req.body.recipent.identity,   
+        },
+        image: req.body.image,
+        evidence: req.body.evidence,
+        issuedOn: req.body.issuedOn,
+        expires: req.body.expires,
+        badge: req.body.badge,
+        verification: {
+            type: req.body.verification.type
+        }
     });
 
     
@@ -62,12 +69,19 @@ module.exports.postAssertion = (req, res) =>{
 
 module.exports.rewriteAssertion = (req, res) => { 
     ASSERTION.model.findOne({_id:req.params.id}).exec((err,data) => {
-        data.name = req.body.name;
-        data.species = req.body.species;
-        data.capable_of = req.body.capable_of;
-        data.residence = req.body.residence;
-        data.eye_color = req.body.eye_color;
-        data.hair_color = req.body.hair_color;
+        data.id = req.body.id;
+        data.recipent = {
+            type:req.body.recipient.type,
+            identity:req.body.recipent.identity, 
+        };
+        data.image = req.body.image;
+        data.evidence = req.body.evidence;
+        data.issuedOn = req.body.issuedOn;
+        data.expires = req.body.expires;
+        data.badge = req.body.badge;
+        data.verification = {
+            type: req.body.verification.type
+        };
 
         data.save( (err, data) => {
             if(!STATUS.serie400(err,req,res,data)){
