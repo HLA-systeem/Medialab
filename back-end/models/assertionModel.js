@@ -56,9 +56,12 @@ var AssertionSchema = MONGOOSE.Schema(
             required: true
         },
         verification: {
-            type: String,
-            required: true
-            },
+            type:{
+                type: String,
+                required: false,
+                default: "hosted"
+            }
+        },
         last_updated:{
             type: Date,
             default: Date.now

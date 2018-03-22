@@ -46,16 +46,16 @@ module.exports.postAssertion = (req, res) =>{
         id: req.body.id,
         recipient: {
             type:req.body.recipient.type,
-            identity:req.body.recipent.identity,   
+            identity:req.body.recipient.identity,   
         },
         image: req.body.image,
         evidence: req.body.evidence,
         issuedOn: req.body.issuedOn,
         expires: req.body.expires,
-        badge: req.body.badge,
+        badge: req.body.badge,/*
         verification: {
             type: req.body.verification.type
-        }
+        }*/
     });
 
     
@@ -71,16 +71,16 @@ module.exports.rewriteAssertion = (req, res) => {
         data.id = req.body.id;
         data.recipent = {
             type:req.body.recipient.type,
-            identity:req.body.recipent.identity, 
+            identity:req.body.recipient.identity, 
         };
         data.image = req.body.image;
         data.evidence = req.body.evidence;
         data.issuedOn = req.body.issuedOn;
         data.expires = req.body.expires;
-        data.badge = req.body.badge;
+        data.badge = req.body.badge;/*
         data.verification = {
             type: req.body.verification.type
-        };
+        };*/
 
         data.save( (err, data) => {
             if(!STATUS.serie400(err,req,res,data)){
