@@ -34,7 +34,6 @@ module.exports.getIssuer = (req, res) => {
                 resObject._links = {self: {'href': 'http://' + req.headers.host + '/issuers'}};
 
                 ISSUER.model.count({}).exec((err2, total) =>{
-                    resObject.pagination = PAGINATION.paginate(start,limit,total,req);
                     STATUS.serie200(req, res, resObject); 
                 });
             }
