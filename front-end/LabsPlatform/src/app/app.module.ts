@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { BadgeComponent } from './badge/badge.component';
 import { BadgeSelectComponent } from './badge-select-screen/badge-select-screen.component';
 import { BadgeclassService } from './services/badgeclass.service';
+import { AssertionService } from './services/assertion.service';
+import { IssuerService } from './services/issuer.service';
 import { ROUTER } from '../routes';
 
 
@@ -25,7 +27,7 @@ import { ROUTER } from '../routes';
     HttpClientModule,
     RouterModule.forRoot(ROUTER)
   ],
-  providers: [BadgeclassService, CookieService],
+  providers: [BadgeclassService,AssertionService,IssuerService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

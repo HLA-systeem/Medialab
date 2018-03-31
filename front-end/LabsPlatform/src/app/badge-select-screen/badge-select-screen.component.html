@@ -1,7 +1,10 @@
 <ul id="badgeGallery">
   <li class="galleryItem" *ngFor="let badge of badgeclasses">
-    <p>{{badge.name}}</p>
-    <p>{{badge.description}}</p>
-    <p>{{badge.criteria}}</p>
+    <img [src]=badge.image class="img-responsive thumb" (click)="badgeSelected($event)">
   </li>
 </ul>
+
+<!--
+- Badges moeten geselecteerd kunnen worden.
+- Badge containers moeten een deel hebben wat uitklapbaar is
+-->
