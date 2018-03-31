@@ -1,6 +1,6 @@
 <ul id="badgeGallery">
   <li class="galleryItem" *ngFor="let badge of badgeclasses">
-    <img [src]=badge.image class="img-responsive thumb" (click)="badgeSelected($event)">
+    <img [src]=badge.image class="img-responsive thumb" (click)="badgeSelected($event, badge.name)">
   </li>
 </ul>
 

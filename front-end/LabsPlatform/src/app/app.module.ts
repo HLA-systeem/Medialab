@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
-import { BadgeComponent } from './badge/badge.component';
 import { BadgeSelectComponent } from './badge-select-screen/badge-select-screen.component';
 import { BadgeclassService } from './services/badgeclass.service';
 import { AssertionService } from './services/assertion.service';
@@ -19,7 +18,6 @@ import { ROUTER } from '../routes';
 @NgModule({
   declarations: [
     AppComponent,
-    BadgeComponent,
     BadgeSelectComponent
   ],
   imports: [

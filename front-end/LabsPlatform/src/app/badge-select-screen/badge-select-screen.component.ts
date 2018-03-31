@@ -18,11 +18,16 @@ export class BadgeSelectComponent implements Observer{
     bcService.watch(this);
   }
 
-  private badgeSelected(event){
-    console.log(event.target);
+  private badgeSelected(e,status){
+    console.log(status);
+    //e.target.style.
+    //pop out side bar with info;
   }
 
   recieveUpdate(){
     this.badgeclasses = this.bcService.get();
+    this.badgeclasses.forEach((item,index) => {
+      console.log(this.badgeclasses[index]);
+    });
   }
 }
