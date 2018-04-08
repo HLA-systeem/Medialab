@@ -1,0 +1,19 @@
+#container{
+    border: solid 1px purple;
+    margin: 0px;
+    padding: 0px;
+    height:100%;
+    left: 8%;
+}
+
+#handle{
+    border: solid 1px green;
+    margin: 0px;
+    padding: 0px;
+}
+
+#sideContent{
+    border: solid 1px black;
+    margin: 0px;
+    padding: 0px;
+}

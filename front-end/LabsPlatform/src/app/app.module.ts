@@ -13,12 +13,14 @@ import { BadgeclassService } from './services/badgeclass.service';
 import { AssertionService } from './services/assertion.service';
 import { IssuerService } from './services/issuer.service';
 import { ROUTER } from '../routes';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BadgeSelectComponent
+    BadgeSelectComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
