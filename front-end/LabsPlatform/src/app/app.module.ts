@@ -17,6 +17,7 @@ import {MainContentComponent} from "./main-content/main-content.component";
 import {AccountComponent} from "./main-content/account/account.component";
 import {MyBadgesComponent} from "./main-content/mybadges/mybadges.component";
 import {MyAccountComponent} from "./main-content/account/myaccount/myaccount.component";
+import { MainScreenComponent } from './main-screen/main-screen.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MyAccountComponent} from "./main-content/account/myaccount/myaccount.com
     MainContentComponent,
     MyAccountComponent,
     MyBadgesComponent,
+    MainScreenComponent,
   ],
   imports: [
     BrowserModule,
