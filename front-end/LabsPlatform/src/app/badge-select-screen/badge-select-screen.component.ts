@@ -11,7 +11,7 @@ import { BadgeclassService } from '../services/badgeclass.service';
 export class BadgeSelectComponent implements Observer{
   private bcService: BadgeclassService
   private badgeclasses: any[];
-  
+  private open = false;
   
   constructor(bcService: BadgeclassService){
     this.bcService = bcService;

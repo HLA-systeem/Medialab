@@ -15,7 +15,7 @@ ROUTER.route('/issuers/:id').get(ISSUERS.get).patch(ISSUERS.update).put(ISSUERS.
     
 function getRoot(req, res){
     res.send('<a href="/assertions">Assertion Collection</a></br>' +
-    '<a href="/badegeclasses">Badgeclasses Collection</a></br>' +
+    '<a href="/badgeclasses">Badgeclasses Collection</a></br>' +
     '<a href="/issuers">Issuers Collection</a>');
 }
 
