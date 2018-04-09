@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     height:100%;
-    left: 8%;
+    float:right;
 }
 
 #handle{
@@ -13,7 +13,17 @@
 }
 
 #sideContent{
+    width: 0px;
     border: solid 1px black;
     margin: 0px;
     padding: 0px;
+    overflow-y: hidden;
+}
+
+#sideContentOpen{
+    width: 320px; 
+    border: solid 1px black;
+    margin: 0px;
+    padding: 0px;
+    text-indent: 5px;
 }
