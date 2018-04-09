@@ -1,0 +1,77 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+# Conflicts:
+#	front-end/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.html
+#	front-end/LabsPlatform/src/app/main-content/main-content.component.css
+#	oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.css
+#	oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.html
+#	oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.spec.ts
+#	oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.ts
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	new file:   front-end/LabsPlatform/.vscode/settings.json
+#	modified:   front-end/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.html
+#	modified:   front-end/LabsPlatform/src/app/main-content/main-content.component.css
+#	new file:   oldCodeForBlogProof/LabsPlatform/.angular-cli.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/.editorconfig
+#	new file:   oldCodeForBlogProof/LabsPlatform/.gitignore
+#	new file:   oldCodeForBlogProof/LabsPlatform/README.md
+#	new file:   oldCodeForBlogProof/LabsPlatform/e2e/app.e2e-spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/e2e/app.po.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/e2e/tsconfig.e2e.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/karma.conf.js
+#	new file:   oldCodeForBlogProof/LabsPlatform/package-lock.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/package.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/protractor.conf.js
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/app.component.css
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/app.component.html
+#	renamed:    front-end/LabsPlatform/src/app/app.component.spec.ts -> oldCodeForBlogProof/LabsPlatform/src/app/app.component.spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/app.component.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/app.module.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.css
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.html
+#	renamed:    front-end/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.spec.ts -> oldCodeForBlogProof/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/badge-select-screen/badge-select-screen.component.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/interfaces/observer.ts
+#	renamed:    front-end/LabsPlatform/src/app/services/assertion.service.spec.ts -> oldCodeForBlogProof/LabsPlatform/src/app/services/assertion.service.spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/services/assertion.service.ts
+#	renamed:    front-end/LabsPlatform/src/app/services/badgeclass.service.spec.ts -> oldCodeForBlogProof/LabsPlatform/src/app/services/badgeclass.service.spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/services/badgeclass.service.ts
+#	renamed:    front-end/LabsPlatform/src/app/services/issuer.service.spec.ts -> oldCodeForBlogProof/LabsPlatform/src/app/services/issuer.service.spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/services/issuer.service.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.css
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.html
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.spec.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/app/sidebar/sidebar.component.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/assets/.gitkeep
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/environments/environment.prod.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/environments/environment.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/favicon.ico
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/index.html
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/main.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/polyfills.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/routes.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/styles.css
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/test.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/tsconfig.app.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/tsconfig.spec.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/src/typings.d.ts
+#	new file:   oldCodeForBlogProof/LabsPlatform/tsconfig.json
+#	new file:   oldCodeForBlogProof/LabsPlatform/tslint.json
+#
+
