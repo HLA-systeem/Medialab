@@ -1,0 +1,11 @@
+a{
+  color: #525252;
+}
+
+a.active{
+  color: #ffc107;
+}
+
+ul{
+  padding: 0.5em 0;
+}

@@ -33,7 +33,7 @@ import {MenuComponent} from './menu/menu.component';
     MenuComponent,
     MyAccountComponent,
     MyBadgesComponent,
-    WorkshopsComponent
+    WorkshopsComponent,
   ],
   imports: [
     BrowserModule,

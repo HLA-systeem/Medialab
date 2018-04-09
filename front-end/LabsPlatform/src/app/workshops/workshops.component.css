@@ -1,0 +1,9 @@
+figure,
+img{
+  width:100%;
+}
+
+.icon{
+  width: 16px;
+  display: inline-block;
+}
