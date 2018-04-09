@@ -13,27 +13,24 @@ import { AssertionService } from './services/assertion.service';
 import { IssuerService } from './services/issuer.service';
 import { ROUTER } from '../routes';
 import {HeaderTopComponent} from "./header/header-top.component";
-import {MainContentComponent} from "./main-content/main-content.component";
-import {AccountComponent} from "./main-content/account/account.component";
-import {MyBadgesComponent} from "./main-content/mybadges/mybadges.component";
-import {MyAccountComponent} from "./main-content/account/myaccount/myaccount.component";
-import {HomePageComponent} from './homepage/homepage.component';
 import {WorkshopsComponent} from './workshops/workshops.component';
 import {MenuComponent} from './menu/menu.component';
+import { IndexComponent } from './index-screen/index/index.component';
+import { AboutComponent } from './index-screen/about/about.component';
+import { TutorialComponent } from './index-screen/tutorial/tutorial.component';
 
 
 @NgModule({
   declarations: [
-    AccountComponent,
     AppComponent,
     BadgeSelectComponent,
     HeaderTopComponent,
-    HomePageComponent,
-    MainContentComponent,
     MenuComponent,
-    MyAccountComponent,
-    MyBadgesComponent,
     WorkshopsComponent,
+    WorkshopsComponent,
+    IndexComponent,
+    AboutComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,
