@@ -1,7 +1,9 @@
 <div class="row">
-  <ul id="badgeGallery" class="col-10">
+  <ul id="badgeGallery" class="col-12">
     <li class="galleryItem" *ngFor="let badge of badgeclasses">
-      <img [src]=badge.image class="img-responsive thumb" (click)="badgeSelected($event, badge.name)">
+      <a [routerLink] = badge._id>
+        <img [src]=badge.image class="img-responsive thumb">
+      </a>
     </li>
   </ul>
 </div>

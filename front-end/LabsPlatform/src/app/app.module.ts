@@ -8,6 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { BadgeSelectComponent } from './badge-select-screen/badge-select-screen.component';
+import { BadgeDetailComponent } from './badge-detail-screen/badge-detail-screen.component';
 import { BadgeclassService } from './services/badgeclass.service';
 import { AssertionService } from './services/assertion.service';
 import { IssuerService } from './services/issuer.service';
@@ -30,7 +31,8 @@ import { TutorialComponent } from './index-screen/tutorial/tutorial.component';
     WorkshopsComponent,
     IndexComponent,
     AboutComponent,
-    TutorialComponent
+    TutorialComponent,
+    BadgeDetailComponent
   ],
   imports: [
     BrowserModule,

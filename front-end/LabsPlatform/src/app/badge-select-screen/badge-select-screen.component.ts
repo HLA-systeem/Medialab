@@ -11,17 +11,11 @@ import { BadgeclassService } from '../services/badgeclass.service';
 export class BadgeSelectComponent implements Observer{
   private bcService: BadgeclassService
   private badgeclasses: any[];
-  private open = false;
+  private open:boolean = false;
   
   constructor(bcService: BadgeclassService){
     this.bcService = bcService;
     bcService.watch(this);
-  }
-
-  private badgeSelected(e,status){
-    console.log(status);
-    //e.target.style.
-    //pop out side bar with info;
   }
 
   recieveUpdate(){
