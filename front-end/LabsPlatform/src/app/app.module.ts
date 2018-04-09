@@ -17,6 +17,9 @@ import {MainContentComponent} from "./main-content/main-content.component";
 import {AccountComponent} from "./main-content/account/account.component";
 import {MyBadgesComponent} from "./main-content/mybadges/mybadges.component";
 import {MyAccountComponent} from "./main-content/account/myaccount/myaccount.component";
+import {HomePageComponent} from './homepage/homepage.component';
+import {WorkshopsComponent} from './workshops/workshops.component';
+import {MenuComponent} from './menu/menu.component';
 
 
 @NgModule({
@@ -25,9 +28,12 @@ import {MyAccountComponent} from "./main-content/account/myaccount/myaccount.com
     AppComponent,
     BadgeSelectComponent,
     HeaderTopComponent,
+    HomePageComponent,
     MainContentComponent,
+    MenuComponent,
     MyAccountComponent,
     MyBadgesComponent,
+    WorkshopsComponent
   ],
   imports: [
     BrowserModule,
