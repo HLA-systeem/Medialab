@@ -3,14 +3,18 @@
   <div class="col-8">
     <a class="navbar-brand" href="#">Badges System</a>
   </div>
-  <div class="col-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div class="col-2" data-toggle="dropdown" aria-haspopup="true" (click)="openMenu = !openMenu" *ngIf="!openMenu" aria-expanded="false">
     <span class="fas fa-bars"></span>
   </div>
-  <div class="overlay"></div>
-  <ul class="navbar-side" id="navbarSide">
-    <li class="navbar-side-item">
-      <a href="#" class="side-link">Signup</a>
+  <div class="col-2" (click)="openMenu = !openMenu" *ngIf="openMenu">
+    <span  class="fas fa-times"></span>
+  </div>
+  <ul class="navbar-side flex-column border-left-0 border-top" [ngClass]="{'reveal': openMenu}" id="navbarSide">
+    <li class="nav-item text-center">
+      <a class="nav-link active" href="#">Inloggen</a>
     </li>
-    <!-- insert more side-items if you so choose -->
+    <li class="nav-item text-center">
+      <a class="nav-link" href="#">Registreren</a>
+    </li>
   </ul>
 </nav>
