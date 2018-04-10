@@ -7,10 +7,10 @@
 }
 
 .navbar-side {
-  height: 100%;
-  width: 25%;
+  height: 93%;
+  width: 100%;
   position: fixed;
-  top: 0;
+  top: 7%;
   right: 0;
   padding: 0;
   list-style: none;
@@ -18,6 +18,11 @@
   background-color: #f7f7f9;
   overflow-y: scroll;
   z-index: 1000;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .navbar-side-item {
@@ -32,16 +37,15 @@
 }
 
 .reveal {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
 }
 
 .overlay {
   position: fixed;
-  display: none;
   top: 0;
   left: 0;
   right: 0;
@@ -50,4 +54,12 @@
   background-color: #ccc;
   opacity: 0.6;
   z-index: 990;
+}
+
+.navbar-light{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index: 99999999;
 }
