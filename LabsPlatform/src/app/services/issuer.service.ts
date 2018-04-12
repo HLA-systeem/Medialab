@@ -6,37 +6,37 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class IssuerService {
-  private badgeclassesCol: AngularFirestoreCollection<Badgeclass>;
-  private badgeclasses: Observable<Badgeclass[]>;
+  private issuersCol: AngularFirestoreCollection<Badgeclass>;
+  private issuers: Observable<Badgeclass[]>;
   private target: AngularFirestoreDocument<Badgeclass>;
 
   constructor(private afs: AngularFirestore){
-    this.badgeclassesCol = this.afs.collection('badgeclasses');
-    this.badgeclasses = this.badgeclassesCol.snapshotChanges().map(changes => {
+    this.issuersCol = this.afs.collection('issuers');
+    this.issuers = this.issuersCol.snapshotChanges().map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Badgeclass;
         data.id = a.payload.doc.id;
         return data;
       });
     });
-    console.log(this.badgeclasses);
+    console.log(this.issuers);
    }
 
   public get(){
-    return this.badgeclasses;
+    return this.issuers;
   }
 
-  public post(badgeclass: Badgeclass){
-    this.badgeclassesCol.add(badgeclass);
+  public post(issuers: Badgeclass){
+    this.issuersCol.add(issuers);
   }
 
-  public patch(badgeclass: Badgeclass){
-    this.target = this.afs.doc(`badgeclasses/${badgeclass.id}`);
-    this.target.update(badgeclass);
+  public patch(issuers: Badgeclass){
+    this.target = this.afs.doc(`issuers/${issuers.id}`);
+    this.target.update(issuers);
   }
 
-  public delete(badgeclass: Badgeclass){
-    this.target = this.afs.doc(`badgeclasses/${badgeclass.id}`);
+  public delete(issuers: Badgeclass){
+    this.target = this.afs.doc(`issuers/${issuers.id}`);
     this.target.delete();
   }
 

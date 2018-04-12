@@ -23,13 +23,9 @@ import {MenuComponent} from './menu/menu.component';
 import { IndexComponent } from './index-screen/index/index.component';
 import { AboutComponent } from './index-screen/about/about.component';
 import { TutorialComponent } from './index-screen/tutorial/tutorial.component';
-<<<<<<< HEAD:LabsPlatform/src/app/app.module.ts
-import { WorkshopDetailComponentComponent } from './workshop-detail-component/workshop-detail-component.component';
 import { LoginComponent } from './users/login/login.component';
-=======
-import { WorkshopDetailComponentComponent } from './workshop-detail/workshop-detail-component';
+import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.component';
 
->>>>>>> origin/master:front-end/LabsPlatform/src/app/app.module.ts
 
 @NgModule({
   declarations: [
@@ -38,17 +34,12 @@ import { WorkshopDetailComponentComponent } from './workshop-detail/workshop-det
     HeaderTopComponent,
     MenuComponent,
     WorkshopsComponent,
-    WorkshopsComponent,
     IndexComponent,
     AboutComponent,
     TutorialComponent,
     BadgeDetailComponent,
-    WorkshopDetailComponentComponent,
-<<<<<<< HEAD:LabsPlatform/src/app/app.module.ts
+    WorkshopDetailComponent,
     LoginComponent
-=======
-    WorkshopAddC
->>>>>>> origin/master:front-end/LabsPlatform/src/app/app.module.ts
   ],
   imports: [
     BrowserModule,
