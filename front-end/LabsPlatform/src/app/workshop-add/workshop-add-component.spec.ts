@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkshopAddComponentComponent } from './workshop-add-component.component';
+import { WorkshopAddComponentComponent } from './workshop-add-component';
 
 describe('WorkshopAddComponentComponent', () => {
   let component: WorkshopAddComponentComponent;

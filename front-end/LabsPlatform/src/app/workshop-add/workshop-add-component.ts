@@ -3,8 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-workshop-add-component',
-  templateUrl: './workshop-add-component.component.html',
-  styleUrls: ['./workshop-add-component.component.css']
+  templateUrl: './workshop-add-component.html',
+  styleUrls: ['./workshop-add-component.css']
 })
 export class WorkshopAddComponentComponent implements OnInit {
 
