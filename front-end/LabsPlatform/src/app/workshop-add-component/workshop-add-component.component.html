@@ -1,0 +1,39 @@
+<div *ngIf="!name; else frominfo">
+  <form [formGroup]="addWorkshop" (ngSubmit)="addPost(addWorkshop.value)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input formControlName="name" type="text" class="form-control" id="name" placeholder="Enter name">
+      <div class="alert" *ngIf="!addWorkshop.controls['name'].valid">This is required</div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div class="form-group">
+        <label>
+          <textarea></textarea>
+        </label>
+        <label for="validate">Minimun of 3 Characters</label>
+        <input id="validate" type="checkbox" name="validate" formControlName="validate" value="1">On
+        <input type="submit" class="button expanded" value="Submit Form" [disabled]="!addWorkshop.valid">
+      </div>
+  </form>
+</div>
+
+<form>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<ng-template #forminfo>
+  <div class="form-container">
+    <div class="row columns">
+      <h1>{{name}}</h1>
+      <p>{{description}}</p>
+    </div>
+  </div>
+</ng-template>
