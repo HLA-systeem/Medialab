@@ -16,7 +16,7 @@ export class BadgeDetailComponent implements OnInit{
 
   constructor(bcService: BadgeclassService, route: ActivatedRoute){
     this.bcService = bcService;
-    this.route;
+    this.route = route;
   }
 
   ngOnInit() {
@@ -27,10 +27,12 @@ export class BadgeDetailComponent implements OnInit{
   }
 
   private getBadge(){
-    let badgeId = this.route.snapshot.params['idCol'];
+    let idCol = this.route.snapshot.params['idCol'];
+    console.log(this.route.snapshot.params['idCol']);
     this.badgeclasses.find((badge) => {
-      if(badge.idCol == badgeId){
+      if(badge.idCol == idCol){
         this.badge = badge;
+        console.log(this.badge);
         return true;
       }
       else{
