@@ -2,6 +2,7 @@
   <ul id="badgeGallery" class="col-12">
     <li class="galleryItem" *ngFor="let badge of badgeclasses">
       <a [routerLink] = badge._id>
+        <p>{{badge.id}}</p>
         <img [src]=badge.image class="img-responsive thumb">
       </a>
     </li>

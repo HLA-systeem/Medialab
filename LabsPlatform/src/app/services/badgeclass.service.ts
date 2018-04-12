@@ -15,7 +15,7 @@ export class BadgeclassService {
     this.badgeclasses = this.badgeclassesCol.snapshotChanges().map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Badgeclass;
-        data.id = a.payload.doc.id;
+        data.idCol = a.payload.doc.id;
         return data;
       });
     });
