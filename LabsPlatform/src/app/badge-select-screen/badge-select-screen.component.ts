@@ -10,9 +10,9 @@ import { Badgeclass } from '../interfaces/badgeclass';
 })
 
 export class BadgeSelectComponent implements OnInit{
-  private bcService: BadgeclassService
+  private bcService: BadgeclassService;
   private badgeclasses: Badgeclass[];
-  
+
   constructor(bcService: BadgeclassService){
     this.bcService = bcService;
   }

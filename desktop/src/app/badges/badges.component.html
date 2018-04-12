@@ -1,1 +1,49 @@
-<h1>Hello Badges</h1>
+<div class="container">
+  <div class="row">
+    <ul id="badgeGallery" class="col-8">
+      <li class="galleryItem" *ngFor="let badge of badgeclasses" (click)="badgeInfo = badge">
+        <a [routerLink] = badge._id>
+          <p>{{badge.id}}</p>
+          <img [src]=badge.image class="img-responsive thumb">
+        </a>
+      </li>
+    </ul>
+    <div class="col-4">
+      <div class="row">
+        <div class="col-12">
+          <h3>Geselecteerde badge informatie</h3>
+          <table class="table">
+            <tbody>
+            <tr>
+              <th scope="row">Titel</th>
+              <td>{{badgeInfo.title}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Locatie</th>
+              <td>{{badgeInfo.address}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Tijdsduur</th>
+              <td>{{badgeInfo.duration}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-primary" (click)="addBadgeInList(badgeInfo)">Toevoegen aan de lijst</button>
+        </div>
+        <div class="col-12">
+          <div class="col-12">
+            <h3>Alle geselecteerde badges</h3>
+            <ul id="badgeSelection" class="col-8">
+              <li class="galleryItem" *ngFor="let badge of selectedBadges" (click)="badgeInfo = badge">
+                <a [routerLink] = badge._id>
+                  <p>{{badge.id}}</p>
+                  <img [src]=badge.image class="img-responsive thumb">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

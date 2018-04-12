@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
-import {HomepageComponent} from "./app/hompage/homepage.component";
-import {CheckinComponent} from "./app/checkin/checkin.component";
+import {HomepageComponent} from "./app/homepage/homepage.component";
 import {BadgesComponent} from "./app/badges/badges.component";
+import {CheckinComponent} from "./app/checkin/checkin.component";
 
 export const ROUTER:Routes = [
   {path:"index", component: HomepageComponent, pathMatch:"full"},

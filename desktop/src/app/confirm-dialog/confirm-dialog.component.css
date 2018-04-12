@@ -1,0 +1,21 @@
+.checkIcon{
+  width: 277px;
+  text-align: center;
+  height: 236px;
+}
+
+.checkIcon span{
+  font-size: 150px;
+}
+
+img{
+  border-radius:50%;
+  height: 100px;
+  width: 100px;
+}
+
+button{
+  margin-top: 1em;
+}
+
+

@@ -1,0 +1,19 @@
+.container{
+  padding-top: 11%;
+  height:100%;
+}
+
+input[type="text"]{
+  width: 15%;
+  margin: 0 470px;
+  height: 60px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.alert-danger{
+  position: absolute;
+  top: 15%;
+  left: 39%;
+}
+
