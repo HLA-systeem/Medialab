@@ -1,0 +1,12 @@
+.homepage-btn{
+  width:98%;
+  height: 300px;
+}
+
+.container{
+  padding-top: 200px;
+}
+
+input[type="text"]{
+  text-transform: uppercase;
+}

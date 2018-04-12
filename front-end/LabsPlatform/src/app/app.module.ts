@@ -19,7 +19,7 @@ import {MenuComponent} from './menu/menu.component';
 import { IndexComponent } from './index-screen/index/index.component';
 import { AboutComponent } from './index-screen/about/about.component';
 import { TutorialComponent } from './index-screen/tutorial/tutorial.component';
-import { WorkshopDetailComponentComponent } from './workshop-detail/workshop-detail-component';
+import { WorkshopDetailComponent } from './workshop-detail/workshop-detail-component';
 
 
 @NgModule({
@@ -34,8 +34,7 @@ import { WorkshopDetailComponentComponent } from './workshop-detail/workshop-det
     AboutComponent,
     TutorialComponent,
     BadgeDetailComponent,
-    WorkshopDetailComponentComponent,
-    WorkshopAddC
+    WorkshopDetailComponent,
   ],
   imports: [
     BrowserModule,
