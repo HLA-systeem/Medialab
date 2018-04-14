@@ -31,12 +31,12 @@ export class IssuerService {
   }
 
   public patch(issuers: Issuer){
-    this.target = this.afs.doc(`issuers/${issuers.id}`);
+    this.target = this.afs.doc(`issuers/${issuers.idCol}`);
     this.target.update(issuers);
   }
 
   public delete(issuers: Issuer){
-    this.target = this.afs.doc(`issuers/${issuers.id}`);
+    this.target = this.afs.doc(`issuers/${issuers.idCol}`);
     this.target.delete();
   }
 

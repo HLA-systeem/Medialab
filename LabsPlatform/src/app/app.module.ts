@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { CookieService } from 'ngx-cookie-service';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { ROUTER } from '../routes';
@@ -28,7 +28,7 @@ import { TutorialComponent } from './index-screen/tutorial/tutorial.component';
 import { LoginComponent } from './users/login/login.component';
 import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.component';
 import { BadgeUploadScreenComponent } from './badge-upload-screen/badge-upload-screen.component';
-
+import { ProfileComponent } from './users/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -43,14 +43,15 @@ import { BadgeUploadScreenComponent } from './badge-upload-screen/badge-upload-s
     BadgeDetailComponent,
     WorkshopDetailComponent,
     LoginComponent,
-    BadgeUploadScreenComponent
+    BadgeUploadScreenComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
-    AngularFireAuth,
+    AngularFireAuthModule,
     AngularFirestoreModule,
     RouterModule.forRoot(ROUTER)
   ],

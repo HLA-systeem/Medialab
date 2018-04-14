@@ -31,12 +31,12 @@ export class AssertionService {
   }
 
   public patch(assertion: Assertion){
-    this.target = this.afs.doc(`assertions/${assertion.id}`);
+    this.target = this.afs.doc(`assertions/${assertion.idCol}`);
     this.target.update(assertion);
   }
 
   public delete(assertion: Assertion){
-    this.target = this.afs.doc(`assertions/${assertion.id}`);
+    this.target = this.afs.doc(`assertions/${assertion.idCol}`);
     this.target.delete();
   }
 

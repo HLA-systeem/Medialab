@@ -1,15 +1,20 @@
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './app/services/auth.guard';
 import { IndexComponent } from "./app/index-screen/index/index.component";
 import { BadgeSelectComponent } from "./app/badge-select-screen/badge-select-screen.component";
 import { BadgeDetailComponent } from "./app/badge-detail-screen/badge-detail-screen.component";
 import { WorkshopsComponent } from './app/workshops/workshops.component';
 import { WorkshopDetailComponent} from "./app/workshop-detail/workshop-detail.component";
+import { LoginComponent } from "./app/users/login/login.component";
+import { ProfileComponent } from "./app/users/profile/profile.component";
 
 export const ROUTER:Routes = [
-    {path:"index", component: IndexComponent, data: {depth: 1}},
-    {path:"badgeSelect/:idCol", component: BadgeDetailComponent, data: {depth: 3}},
-    {path:"badgeSelect", component: BadgeSelectComponent, data: {depth: 2}},
-    {path:"workshops", component: WorkshopsComponent, pathMatch:"full"},
-    {path:"workshopDetail", component: WorkshopDetailComponent, pathMatch:"full"},
-    {path:"", redirectTo: "/index", pathMatch:"full"}
+    {path:"login", component: LoginComponent},
+    {path:"index", component: IndexComponent},
+    {path:"profile", component: ProfileComponent, canActivate:[AuthGuard] },
+    {path:"badgeSelect/:idCol", component: BadgeDetailComponent},
+    {path:"badgeSelect", component: BadgeSelectComponent},
+    {path:"workshops", component: WorkshopsComponent},
+    {path:"workshopDetail", component: WorkshopDetailComponent},
+    {path:"", redirectTo: "/login", pathMatch:"full"}
 ]
