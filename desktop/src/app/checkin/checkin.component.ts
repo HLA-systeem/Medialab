@@ -21,7 +21,7 @@ export class CheckinComponent {
   }
 
   addPost(post):void {
-    if(post.checkinCode !== this.exampleCode){
+    if(post.checkinCode.toUpperCase() !== this.exampleCode){
       this.error = true;
     }
     else{

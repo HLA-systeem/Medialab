@@ -1,0 +1,51 @@
+.card-img-top{
+  float:left;
+  max-width:200px;
+}
+
+
+.thumb{
+  max-width:100px;
+  max-height:50px;
+  width:auto;
+  height:auto;
+}
+
+#badgeSelection li{
+  margin-bottom:1em;
+}
+
+#badgeSelection li figure{
+  height:50px;
+  width: 70px;
+  display: inline-block;
+  padding: 0;
+}
+
+#badgeSelection li .row > *{
+  vertical-align: middle;
+}
+
+
+.card-title{
+  margin-bottom:0;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+figure{
+  height: 170px;
+  width:100%;
+  margin: 0;
+  display: table;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.deleteBadgeFromList{
+
+}

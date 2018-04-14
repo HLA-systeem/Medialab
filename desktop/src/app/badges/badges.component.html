@@ -1,49 +1,71 @@
 <div class="container">
   <div class="row">
-    <ul id="badgeGallery" class="col-8">
-      <li class="galleryItem" *ngFor="let badge of badgeclasses" (click)="badgeInfo = badge">
-        <a [routerLink] = badge._id>
-          <p>{{badge.id}}</p>
-          <img [src]=badge.image class="img-responsive thumb">
-        </a>
-      </li>
-    </ul>
+    <div class="col-8">
+      <h3>Welkom,Selecteer de badge die je wilt behalenen druk op volgende</h3>
+      <ul id="badgeGallery" class="nav">
+        <li class="galleryItem nav-item" *ngFor="let badge of badgeclasses" (click)="badgeInfo = badge">
+          <a [routerLink] = badge._id>
+            <div class="card">
+              <figure>
+                <span class="helper"></span>
+                <img class="card-img-top" [src]=badge.image alt="Card image cap">
+              </figure>
+              <div class="card-body btn-primary">
+                <p class="card-title">{{badge.name}}</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="col-4">
       <div class="row">
         <div class="col-12">
-          <h3>Geselecteerde badge informatie</h3>
+          <p>Geselecteerde badge informatie</p>
           <table class="table">
             <tbody>
             <tr>
               <th scope="row">Titel</th>
-              <td>{{badgeInfo.title}}</td>
+              <td>{{badgeInfo?.name}}</td>
             </tr>
             <tr>
               <th scope="row">Locatie</th>
-              <td>{{badgeInfo.address}}</td>
+              <td>{{badgeInfo?.location}}</td>
             </tr>
             <tr>
               <th scope="row">Tijdsduur</th>
-              <td>{{badgeInfo.duration}}</td>
+              <td>{{badgeInfo?.duration}}</td>
             </tr>
             </tbody>
           </table>
           <button class="btn btn-primary" (click)="addBadgeInList(badgeInfo)">Toevoegen aan de lijst</button>
         </div>
         <div class="col-12">
-          <div class="col-12">
-            <h3>Alle geselecteerde badges</h3>
-            <ul id="badgeSelection" class="col-8">
-              <li class="galleryItem" *ngFor="let badge of selectedBadges" (click)="badgeInfo = badge">
-                <a [routerLink] = badge._id>
-                  <p>{{badge.id}}</p>
-                  <img [src]=badge.image class="img-responsive thumb">
-                </a>
-              </li>
-            </ul>
-          </div>
+          <p>Alle geselecteerde badges</p>
+          <ul id="badgeSelection" class="nav">
+            <li class="galleryItem nav-item col-12" *ngFor="let badge of selectedBadges; let i=index" (click)="badgeInfo = badge">
+              <div class="row">
+                <figure class="col-2 text-center">
+                  <img [src]=badge?.image class="img-responsive thumb">
+                </figure>
+                <span class="col-8">
+                  <span class="helper"></span>
+                  {{badge?.name}}
+                </span>
+                <span class="col-2" (click)="removeBadgeFromList(i, badge?.id)">
+                  <span class="btn btn-primary deleteBadgeFromList">
+                    <i class="far fa-trash-alt"></i>
+                  </span>
+                </span>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-primary" (click)="checkSelectedBadges()">Zoeken naar workshops</button>
         </div>
       </div>
     </div>
+    <ul class="navbar-side flex-column border-left-0 border-top" [ngClass]="{'openWorkshop': openWorkshop}" id="navbarSide">
+      <workshops [shopWorkshops]="shopWorkshops" (parentFunction)="closeWorkshopPage($event)"></workshops>
+    </ul>
   </div>
 </div>

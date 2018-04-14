@@ -17,9 +17,10 @@ import {RouterModule} from "@angular/router";
 import {ROUTER} from "../routes";
 import {BadgesComponent} from "./badges/badges.component";
 import {CheckinComponent} from "./checkin/checkin.component";
-import {environment} from "../../../LabsPlatform/src/environments/environment";
 import {AngularFireModule} from "angularfire2";
 import {AngularFirestoreModule} from "angularfire2/firestore";
+import {WorkshopsComponent} from "./workshops/workshops.component";
+import {environment} from "../environments/environment";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {AngularFirestoreModule} from "angularfire2/firestore";
     CheckinComponent,
     ConfirmDialogComponent,
     HomepageComponent,
-    MenuTopComponent
+    MenuTopComponent,
+    WorkshopsComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -39,7 +41,7 @@ import {AngularFirestoreModule} from "angularfire2/firestore";
     MatDialogModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
+    // AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
     AngularFirestoreModule,
     RouterModule.forRoot(ROUTER)
   ],
