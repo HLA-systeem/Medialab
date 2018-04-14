@@ -8,6 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { ROUTER } from '../routes';
 import { environment } from '../environments/environment';
@@ -53,6 +54,7 @@ import { ProfileComponent } from './users/profile/profile.component';
     AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     RouterModule.forRoot(ROUTER)
   ],
   providers: [AuthService, BadgeclassService, AssertionService, IssuerService, CookieService],

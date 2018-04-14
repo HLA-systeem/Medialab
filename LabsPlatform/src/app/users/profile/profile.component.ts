@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(auth: AuthService){
     this.auth = auth;
+    auth.isAuth();
    }
 
   ngOnInit() {
