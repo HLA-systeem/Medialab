@@ -106,11 +106,11 @@ export class BadgesComponent implements OnInit{
 
     this.workshopclasses = workshopExample;
 
-    //this.badgeclasses = badgeExample;
-     this.bcService.get().subscribe(badgeclasses => {
-       this.badgeclasses = badgeclasses;
-       console.log(this.badgeclasses);
-     });
+    this.badgeclasses = badgeExample;
+    //  this.bcService.get().subscribe(badgeclasses => {
+    //    this.badgeclasses = badgeclasses;
+    //    console.log(this.badgeclasses);
+    //  });
   }
 
   public addBadgeInList(badgeInfo){

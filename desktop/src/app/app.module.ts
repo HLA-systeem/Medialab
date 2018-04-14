@@ -22,6 +22,7 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFirestoreModule} from "angularfire2/firestore";
 import {WorkshopsComponent} from "./workshops/workshops.component";
 import {environment} from "../environments/environment";
+import {LoginComponent} from "../../../LabsPlatform/src/app/users/login/login.component";
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import {environment} from "../environments/environment";
     ConfirmDialogComponent,
     HomepageComponent,
     MenuTopComponent,
+    LoginComponent,
     WorkshopsComponent
   ],
   imports: [
