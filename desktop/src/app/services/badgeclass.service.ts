@@ -6,9 +6,9 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BadgeclassService {
-  private badgeclassesCol: AngularFirestoreCollection<Badgeclass>;
-  private badgeclasses: Observable<Badgeclass[]>;
-  private target: AngularFirestoreDocument<Badgeclass>;
+  private badgeclassesCol:AngularFirestoreCollection<Badgeclass>;
+  private badgeclasses:Observable<Badgeclass[]>;
+  private target:AngularFirestoreDocument<Badgeclass>;
 
   constructor(private afs: AngularFirestore){
     this.badgeclassesCol = this.afs.collection('badgeclasses');
@@ -19,10 +19,10 @@ export class BadgeclassService {
         return data;
       });
     });
-    console.log(this.badgeclasses);
    }
 
   public get(){
     return this.badgeclasses;
   }
-}
+
+  }

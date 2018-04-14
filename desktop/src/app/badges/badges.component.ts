@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Badgeclass} from "../../../../LabsPlatform/src/app/interfaces/badgeclass";
-import {BadgeclassService} from "../../../../LabsPlatform/src/app/services/badgeclass.service";
+import {Badgeclass} from "../interfaces/badgeclass";
+import {BadgeclassService} from "../services/badgeclass.service";
 
 @Component({
     selector: 'badges',
@@ -9,8 +9,8 @@ import {BadgeclassService} from "../../../../LabsPlatform/src/app/services/badge
 })
 
 export class BadgesComponent implements OnInit{
-  private bcService: BadgeclassService;
-  private badgeclasses =  [];
+  private bcService:BadgeclassService;
+  private badgeclasses:Badgeclass[];
   private selectedBadges = [];
   public badgeInfo = {};
 
@@ -18,7 +18,7 @@ export class BadgesComponent implements OnInit{
     this.bcService = bcService;
   }
 
-  ngOnInit() {
+  ngOnInit() {/*
     let badgeExample = [{
       idCol: "9jhfwhugjse",
       "@context": "https://w3id.org/openbadges/v2",
@@ -30,12 +30,12 @@ export class BadgesComponent implements OnInit{
       criteria: "John Doe",
       tags: ["test"],
       issuer: "test",
-    }];
+    }];*/
 
-    this.badgeclasses = badgeExample;
-    // this.bcService.get().subscribe(badgeclasses => {
-    //   this.badgeclasses = badgeclasses;
-    //   console.log(this.badgeclasses);
-    // });
+    //this.badgeclasses = badgeExample;
+     this.bcService.get().subscribe(badgeclasses => {
+       this.badgeclasses = badgeclasses;
+       console.log(this.badgeclasses);
+     });
   }
 }

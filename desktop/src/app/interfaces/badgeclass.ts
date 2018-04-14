@@ -1,9 +1,9 @@
 export interface Badgeclass {
-    idCol: string,
+    idCol?: string,
     "@context": "https://w3id.org/openbadges/v2",
     type: "BadgeClass",
     id: string,
-    name: "email",
+    name: string,
     description: String,
     image: String,
     criteria: String,

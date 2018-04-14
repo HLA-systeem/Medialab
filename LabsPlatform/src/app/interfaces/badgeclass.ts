@@ -1,5 +1,5 @@
 export interface Badgeclass {
-    idCol?: String,
+    idCol?: string,
     "@context": "https://w3id.org/openbadges/v2",
     type: "BadgeClass",
     id: string,
