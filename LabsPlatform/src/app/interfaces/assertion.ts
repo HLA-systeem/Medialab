@@ -1,8 +1,9 @@
 export interface Assertion {
-    "@context": "https://w3id.org/openbadges/v2",
-    type: "Assertion",
-    id: string,
-    recipient: {
+  idCol?: string,
+  "@context": "https://w3id.org/openbadges/v2",
+  type: "Assertion",
+  id: string,
+  recipient: {
       type: "email",
       identity: String,
       hashed: false

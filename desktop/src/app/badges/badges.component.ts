@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Badgeclass} from "../interfaces/badgeclass";
+import {BadgeclassService} from "../services/badgeclass.service";
 
 @Component({
     selector: 'badges',
@@ -8,6 +10,7 @@ import {Component, OnInit} from '@angular/core';
 
 export class BadgesComponent implements OnInit{
   private badgeclasses =  [];
+  private bcService:BadgeclassService;
   private selectedBadges = [];
   private workshopclasses =  [];
   public badgeInfo;
@@ -103,11 +106,11 @@ export class BadgesComponent implements OnInit{
 
     this.workshopclasses = workshopExample;
 
-    this.badgeclasses = badgeExample;
-    // this.bcService.get().subscribe(badgeclasses => {
-    //   this.badgeclasses = badgeclasses;
-    //   console.log(this.badgeclasses);
-    // });
+    //this.badgeclasses = badgeExample;
+     this.bcService.get().subscribe(badgeclasses => {
+       this.badgeclasses = badgeclasses;
+       console.log(this.badgeclasses);
+     });
   }
 
   public addBadgeInList(badgeInfo){

@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import {HomepageComponent} from "./homepage/homepage.component";
 import {ConfirmDialogComponent} from "./confirm-dialog/confirm-dialog.component";
 import {MenuTopComponent} from "./menu-top/menu-top.component";
+import { BadgeclassService } from './services/badgeclass.service';
 import {RouterModule} from "@angular/router";
 import {ROUTER} from "../routes";
 import {BadgesComponent} from "./badges/badges.component";
@@ -48,7 +49,7 @@ import {environment} from "../environments/environment";
   entryComponents: [
     ConfirmDialogComponent,
   ],
-  providers: [],
+  providers: [BadgeclassService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,12 +31,12 @@ export class BadgeclassService {
   }
 
   public patch(badgeclass: Badgeclass){
-    this.target = this.afs.doc(`badgeclasses/${badgeclass.id}`);
+    this.target = this.afs.doc(`badgeclasses/${badgeclass.idCol}`);
     this.target.update(badgeclass);
   }
 
   public delete(badgeclass: Badgeclass){
-    this.target = this.afs.doc(`badgeclasses/${badgeclass.id}`);
+    this.target = this.afs.doc(`badgeclasses/${badgeclass.idCol}`);
     this.target.delete();
   }
 
