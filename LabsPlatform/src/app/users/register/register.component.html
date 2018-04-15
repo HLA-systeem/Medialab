@@ -1,0 +1,18 @@
+<div class="container h-100 d-flex justify-content-center">
+    <div class="jumbotron my-auto">
+      <h2 class="col-12">Registreren</h2>
+
+      <p class="col-12 error" *ngIf="auth.error">
+          {{ auth.error }}
+      </p>
+  
+      <input class="col-12" type="text" [(ngModel)]="name" placeholder="volledige naam">
+      <input class="col-12" type="text" [(ngModel)]="email" placeholder="email">
+      <input class="col-12" type="password" [(ngModel)]="password" placeholder="wachtwoord">
+      <input class="col-12" type="password" [(ngModel)]="passwordRe" placeholder="bevestig wachtwoord">
+
+      <button class="col-12" (click)="register()" [disabled]="!name || !email || !password || !passwordRe">
+          Aanmelden
+      </button>
+    </div>
+  </div>

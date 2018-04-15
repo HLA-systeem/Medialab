@@ -1,3 +1,24 @@
+<div class="container h-100 d-flex justify-content-center">
+  <div class="jumbotron my-auto">
+    <h2 class="col-12">Inloggen</h2>
+
+    <input class="col-12" type="text" [(ngModel)]="email" placeholder="email">
+    <input class="col-12" type="password" [(ngModel)]="password" placeholder="wachtwoord">
+
+    <button class="col-12" (click)="login()" [disabled]="!email || !password">
+        Inloggen
+    </button>
+
+    <p class="col-12">Nog Geen Account?</p>
+    <p class="col-12"><a routerLink="/register">Klik Hier!</a></p>
+  </div>
+</div>
+
+<!--
 <button (click)="auth.googleLogin()">
-  Log in with Google
+  Log in met Google
 </button>
+-->
+  <!--
+
+-->

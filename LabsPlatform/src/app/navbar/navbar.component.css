@@ -1,0 +1,15 @@
+.navbar{
+    padding-left:0px;
+    padding-right:0px;
+    position: fixed;
+    z-index: 1;
+}
+
+li{
+    text-align: center;
+}
+.container{
+    position: fixed;
+    z-index: 1;
+    padding-left: 0px;
+}

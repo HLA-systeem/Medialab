@@ -1,0 +1,16 @@
+h2, p{text-align: center;
+}
+
+h2{
+    margin-bottom: 10%;
+}
+
+input{
+ margin-bottom: 5%;   
+}
+
+button{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+}

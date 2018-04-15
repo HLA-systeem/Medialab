@@ -1,0 +1,26 @@
+h2, p{text-align: center;
+}
+
+h2{
+    margin-bottom: 10%;
+}
+
+input{
+ margin-bottom: 5%;
+ padding-top: 2%;
+ padding-bottom: 2%;
+}
+
+button{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.error{
+    margin-bottom: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgba(223, 74, 74, 0.800)
+}

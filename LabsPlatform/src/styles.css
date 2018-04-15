@@ -24,3 +24,6 @@ body{height:100%;}
 
 .thumb:hover{
     border: 5px groove rgb(255, 241, 115)}
+
+::-webkit-input-placeholder { text-align:right; }
+input:-moz-placeholder { text-align:right; }

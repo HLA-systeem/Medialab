@@ -5,12 +5,15 @@ import { BadgeDetailComponent } from "./app/badge-detail-screen/badge-detail-scr
 import { WorkshopsComponent } from './app/workshops/workshops.component';
 import { WorkshopDetailComponent} from "./app/workshop-detail/workshop-detail.component";
 import { LoginComponent } from "./app/users/login/login.component";
+import { RegisterComponent } from "./app/users/register/register.component";
 import { ProfileComponent } from "./app/users/profile/profile.component";
+import { AuthGuard } from './app/services/auth.guard';
 
 export const ROUTER:Routes = [
     {path:"login", component: LoginComponent},
+    {path:"register", component: RegisterComponent},
     {path:"index", component: IndexComponent},
-    {path:"profile", component: ProfileComponent},
+    {path:"profile", component: ProfileComponent, canActivate: [AuthGuard]},
     {path:"badgeSelect/:idCol", component: BadgeDetailComponent},
     {path:"badgeSelect", component: BadgeSelectComponent},
     {path:"workshops", component: WorkshopsComponent},

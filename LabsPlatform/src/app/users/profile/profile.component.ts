@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { UploadService } from '../../services/upload.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,14 +8,29 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  public auth: AuthService;
+  private upService: UploadService;
+  private file;
+  private des;
 
-  constructor(auth: AuthService){
-    this.auth = auth;
-    auth.isAuth();
+  constructor(upService: UploadService){
+    this.upService = upService;
    }
 
   ngOnInit() {
+  }
+
+  private handleFile(e){
+    let input = e.target;
+    this.file = input.files[0];
+    this.update();
+  }
+
+  private desUpdate(e){
+
+  }
+
+  private update(){
+    this.upService.uploadImage(this.file);
   }
 
 }

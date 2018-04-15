@@ -17,10 +17,10 @@ import { AppComponent } from './app.component';
 import { BadgeSelectComponent } from './badge-select-screen/badge-select-screen.component';
 import { BadgeDetailComponent } from './badge-detail-screen/badge-detail-screen.component';
 import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth.guard';
 import { BadgeclassService } from './services/badgeclass.service';
 import { AssertionService } from './services/assertion.service';
 import { IssuerService } from './services/issuer.service';
-import { HeaderTopComponent } from "./header/header-top.component";
 import { WorkshopsComponent } from './workshops/workshops.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index-screen/index/index.component';
@@ -30,12 +30,16 @@ import { LoginComponent } from './users/login/login.component';
 import { WorkshopDetailComponent } from './workshop-detail/workshop-detail.component';
 import { BadgeUploadScreenComponent } from './badge-upload-screen/badge-upload-screen.component';
 import { ProfileComponent } from './users/profile/profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterComponent } from './users/register/register.component';
+import { UploadService } from './services/upload.service';
+import { DrawerComponent } from './drawer/drawer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BadgeSelectComponent,
-    HeaderTopComponent,
     MenuComponent,
     WorkshopsComponent,
     IndexComponent,
@@ -45,7 +49,10 @@ import { ProfileComponent } from './users/profile/profile.component';
     WorkshopDetailComponent,
     LoginComponent,
     BadgeUploadScreenComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavbarComponent,
+    RegisterComponent,
+    DrawerComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +64,7 @@ import { ProfileComponent } from './users/profile/profile.component';
     AngularFireDatabaseModule,
     RouterModule.forRoot(ROUTER)
   ],
-  providers: [AuthService, BadgeclassService, AssertionService, IssuerService, CookieService],
+  providers: [AuthService, AuthGuard, BadgeclassService, AssertionService, IssuerService, CookieService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

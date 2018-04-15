@@ -1,1 +1,13 @@
-<button (click)="auth.logout()">Logout</button>
+<div id="avatar" class="col-12">
+    <img src='assets/defaultAv.png' class="img-responsive">
+    <input type="file" (change)="handleFile($event)">
+</div>
+
+<div id="persona" class="col-12">
+    <p id="name"></p>
+    <textarea cols="40" rows="5" [(ngModel)]="des"></textarea>
+</div>
+
+<div id="badges" class="col-12">
+    <span>Je hebt nog geen badges</span>
+</div>
