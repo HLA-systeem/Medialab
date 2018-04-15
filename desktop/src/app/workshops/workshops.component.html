@@ -1,0 +1,69 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="closeWorkshopPage()">Terug</button>
+  <div class="row">
+    <div class="col-8">
+      <h1>Hello Workshops</h1>
+      <div class="card col-12" *ngFor="let workshop of shopWorkshops" (click)="workshopInfo = workshop">
+        <div class="card-body">
+          <img [src]=workshop.img class="card-img-top" alt="Card image cap">
+          <h5 class="card-title">{{workshop.title}}</h5>
+          <ul class="nav flex-column">
+          <li class="nav-item">
+              <span class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+            <span>{{workshop.location}}</span>
+          </li>
+          <li class="nav-item">
+              <span class="icon">
+                <i class="fas fa-calendar-alt"></i>
+              </span>
+            <span>{{workshop.date}}</span>
+          </li>
+          <li class="nav-item">
+              <span class="icon">
+                <i class="fas fa-clock"></i>
+              </span>
+            <span>{{workshop.time}}</span>
+          </li>
+        </ul>
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample{{workshop.id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Omschrijving
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample{{workshop.id}}">
+          <div class="card card-body">
+            {{workshop.description}}
+          </div>
+          <button class="btn btn-primary" (click)="addWorkshopInList(workshopInfo)">Toevoegen aan de lijst</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <p>Alle geselecteerde workshops</p>
+      <ul id="badgeSelection" class="nav">
+        <li class="galleryItem nav-item col-12" *ngFor="let workshop of selectedWorkshop; let i=index" (click)="workshopInfo = workshops">
+          <div class="row">
+            <figure class="col-2 text-center">
+              <img [src]=workshop.img class="img-responsive thumb">
+            </figure>
+            <span class="col-8">
+            <span class="helper"></span>
+            {{workshop.title}}
+          </span>
+            <span class="col-2" (click)="removeWorksohpFromList(i, workshop.id)">
+            <span class="btn btn-primary deleteBadgeFromList">
+              <i class="far fa-trash-alt"></i>
+            </span>
+          </span>
+          </div>
+        </li>
+      </ul>
+      <a href="/login">
+        <button class="btn btn-primary">Inschrijven</button>
+      </a>
+    </div>
+  </div>
+</div>
