@@ -1,13 +1,25 @@
-<div id="avatar" class="col-12">
-    <img src='assets/defaultAv.png' class="img-responsive">
-    <input type="file" (change)="handleFile($event)">
+<div class="avatar" class="col-12" *ngIf="!file">
+    <div class="d-flex col-12">
+        <img src='assets/defaultAv.png' class="img-responsive col-8 mx-auto">
+    </div>
+    <div class="col-12" id="selectFile">
+        <input type="file" (change)="handleFile($event)" class="mx-auto">
+    </div>
 </div>
 
-<div id="persona" class="col-12">
-    <p id="name"></p>
-    <textarea cols="40" rows="5" [(ngModel)]="des"></textarea>
+<div class="avatar" class="col-12" *ngIf="file">
+        <div class="d-flex col-12">
+            <img [src]='url' class="img-responsive col-8 mx-auto">
+        </div>
 </div>
 
-<div id="badges" class="col-12">
-    <span>Je hebt nog geen badges</span>
-</div>
+    <div id="persona" class="col-12">
+        <p id="name"></p>
+        <textarea class="col-12" rows="5" [(ngModel)]="des"></textarea>
+    </div>
+
+    <div id="badges" class="col-12">
+        <span>Je hebt nog geen badges</span>
+    </div>
+
+    <button class="col-12" (click)="logOut()">Log Uit</button>

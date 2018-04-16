@@ -1,7 +1,19 @@
 <nav class="col-12 navbar navbar-dark bg-dark">
+  <img id="logo" src='assets/logo.png' class="img-responsive mx-auto">
+  <!--
   <h2 class="navbar-brand mx-auto">Labs for Labs</h2>
+    
     <button class="navbar-toggler" type="button" (click)="openDrawer()">
       <span class="navbar-toggler-icon"></span>
     </button>
+    -->
+
 </nav>
+
+<div id="menu" class="row" *ngIf="auth.uid && !auth.rB">
+  <button routerLink="/badgeSelect" class="col-4 d-flex"><img src="assets/learn.png" class="img-responsive mx-auto my-auto mI"></button>
+  <button routerLink="/profile" class="col-4 d-flex"><img src="assets/profile.png" class="img-responsive mx-auto my-auto mI"></button>
+  <button routerLink="/feed" class="col-4 d-flex"><img src="assets/feed.png" class="img-responsive mx-auto my-auto mI"></button>
+</div>
+
 

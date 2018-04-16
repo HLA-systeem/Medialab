@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Observable';
 export class AuthService {
   public uid: string;
   public error: string;
+  public rB = false;
 
   constructor(private fAuth: AngularFireAuth, private router: Router) {
     this.fAuth.authState.subscribe((auth)=>{
@@ -42,7 +43,8 @@ export class AuthService {
 
   logout(){
     this.fAuth.auth.signOut().then(() => {
-        this.router.navigate(['/login']);
+      this.rB = true;
+      this.router.navigate(['/login']);
     });
   }
 
