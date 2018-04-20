@@ -1,0 +1,18 @@
+ul{list-style: none;}
+
+.thumb{
+    width:150px;
+    height:auto;
+    border: 4px groove rgb(195, 195, 212);
+    padding: 5px;
+}
+
+.thumb:hover{
+    border: 5px groove rgb(255, 241, 115)}
+
+app-sidebar{
+    position: fixed;
+    left: 95%;
+    height: 90vh;
+    z-index: 1;
+}

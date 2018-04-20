@@ -1,0 +1,7 @@
+{
+	"name": "Rookie Badge Issuer",
+	"description": "Issues great new Open Badges to self.",
+	"image": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/images/monkeyDude.png",
+	"criteria": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/criteria/rookie-badge.html",
+	"issuer": "http://project.cmi.hr.nl/2017_2018/mlab_labflab_t2/openbadges/issuers/dev.json"
+}

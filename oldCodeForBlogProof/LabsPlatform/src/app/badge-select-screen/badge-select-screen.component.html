@@ -1,0 +1,8 @@
+<div class="row">
+  <ul id="badgeGallery" class="col-10">
+    <li class="galleryItem" *ngFor="let badge of badgeclasses">
+      <img [src]=badge.image class="img-responsive thumb" (click)="badgeSelected($event, badge.name)">
+    </li>
+  </ul>
+  <app-sidebar></app-sidebar>
+</div>
